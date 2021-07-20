@@ -280,14 +280,14 @@ void OusterDriver::getMetadata(
       RCLCPP_ERROR(
         this->get_logger(),
         "Failed to save metadata to: %s.",
-        request->filepath);
+        request->filepath.c_str());
     }
     else
     {
       RCLCPP_INFO(
         this->get_logger(),
         "Saving metadata to a .json file specifed here: %s",
-        request->filepath);
+        request->filepath.c_str());
     }
   }
 }
